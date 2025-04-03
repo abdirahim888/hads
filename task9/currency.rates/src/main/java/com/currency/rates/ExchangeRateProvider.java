@@ -9,3 +9,7 @@ public class ExchangeRateProvider {
         exchangeRates.put("USD_GBP", 0.75);
         exchangeRates.put("GBP_USD", 1.33);
     }
+    public static double getRate(String from, String to) {
+        return exchangeRates.getOrDefault(from + "_" + to, 1.0);
+    }
+}
