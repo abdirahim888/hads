@@ -18,7 +18,7 @@ pipeline {
         stage('abdirahim1') {
             steps {
                 withSonarQubeEnv('SonarQube-Server') {
- bat "C:\\sonar-scanner-5.0.1.3006-windows\\bin\\sonar-scanner -Dsonar.projectKey=abdirahim1 -Dsonar.sources=task9\\src\\main\\java -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqa_e22957c4542fd762a603156438da08c9422b574c"                }
+ bat "C:\\sonar-scanner-5.0.1.3006-windows\\bin\\sonar-scanner -Dsonar.projectKey=abdirahim1 -Dsonar.sources=src\\main\\java -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqa_e22957c4542fd762a603156438da08c9422b574c"                }
             }
         }
     }
