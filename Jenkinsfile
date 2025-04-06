@@ -4,8 +4,8 @@ pipeline {
     environment {
         SONAR_SCANNER_HOME = 'C:\\sonar-scanner-5.0.1.3006-windows\\bin'
         SONAR_HOST_URL = 'http://localhost:9000'
-        SONAR_PROJECT_KEY = 'abdirahim1'
-        SONAR_LOGIN = 'sqa_e22957c4542fd762a603156438da08c9422b574c'
+        SONAR_PROJECT_KEY = 'TESTING YOUR CURRENCY CONVERSION APP'
+        SONAR_LOGIN = 'sqp_18f0517dfb2cd286f0f28920478212878a9dd807'
     }
 
     stages {
@@ -15,10 +15,11 @@ pipeline {
             }
         }
 
-        stage('abdirahim1') {
+        stage('abdirahim2') {
             steps {
-                withSonarQubeEnv('SonarQube-Server') {
- bat "C:\\sonar-scanner-5.0.1.3006-windows\\bin\\sonar-scanner -Dsonar.projectKey=abdirahim1 -Dsonar.sources=src\\main\\java -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqa_e22957c4542fd762a603156438da08c9422b574c"                }
+                withSonarQubeEnv('abdirahim2') {
+ bat "C:\\sonar-scanner-5.0.1.3006-windows\\bin\\sonar-scanner -Dsonar.projectKey=TESTING YOUR CURRENCY CONVERSION APP -Dsonar.sources=task9\\src/main/java -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqp_18f0517dfb2cd286f0f28920478212878a9dd807"               
+              }
             }
         }
     }
