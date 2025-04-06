@@ -15,9 +15,9 @@ pipeline {
             }
         }
 
-        stage('abdirahim2') {
+        stage('abdirahim3') {
             steps {
-                withSonarQubeEnv('abdirahim2') {
+                withSonarQubeEnv('abdirahim3') {
  bat "C:\\sonar-scanner-5.0.1.3006-windows\\bin\\sonar-scanner -Dsonar.projectKey=TESTING YOUR CURRENCY CONVERSION APP -Dsonar.sources=task9\\src/main/java -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqp_18f0517dfb2cd286f0f28920478212878a9dd807"               
               }
             }
